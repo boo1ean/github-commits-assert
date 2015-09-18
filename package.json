@@ -1,5 +1,5 @@
 {
-  "name": "github-commits-assert",
+  "name": "github-watchdog",
   "version": "1.0.0",
   "description": "Detect github commit crime",
   "main": "index.js",

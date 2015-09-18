@@ -1,5 +1,4 @@
 var _ = require('lodash');
-var fs =require('fs');
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -35,5 +34,5 @@ module.exports = function startServer (opts) {
 	})
 
 	app.listen(port);
-	log.info('Github watchdog started at %', port);
+	log.info('Github watchdog started at port %s', port);
 };

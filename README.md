@@ -1,1 +1,33 @@
 ## Check commit messages and send worning if something is wrong
+
+## Installation
+
+npm install github-watchdog
+
+## Sample usage
+
+var startWatchdog = require('gihub-watchdog');
+
+startWatchdog({
+	alerting: {
+		mailer: {
+			service: 'Mandrill',
+			auth: {
+				user: 'your@email.com',
+				pass: '0239c4920ck40jv'
+			}
+		},
+
+		mailOptions: {
+			subject: 'ALARM!!! someone failed something',
+			html: 'User {{ username }} failed at {{ repo }}',
+			from: 'Github Watchdog <watchdog@your-domain.com>',
+			to: 'youremail@example.com, second@example.com'
+		},
+	},
+
+	// Check if commit message contains jira id
+	assertions: {
+		'username/repo': 'commit message should contain JIRA-'
+	}
+});
