@@ -15,8 +15,13 @@ module.exports = function startServer (opts) {
 	app.post('/push', function (req, res) {
 		log.info('Start handling push event');
 
-		var repo = res.body.repository.full_name;
-		var commits = res.body.commits;
+		var repo = req.body.repository.full_name;
+		var commits = req.body.commits;
+
+		if (!commits || !repo) {
+			log.info('No commits or repo - nothing to do with that');
+			return responseSuccess();
+		}
 
 		watchdog.assert(repo, commits)
 			.then(responseSuccess)
