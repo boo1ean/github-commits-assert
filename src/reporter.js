@@ -23,7 +23,6 @@ module.exports = class Reporter {
 				time: new Date().toISOString()
 			};
 
-
 			var mail = _.clone(this.mailOptions);
 
 			mail.subject = _.template(mail.subject)(data);

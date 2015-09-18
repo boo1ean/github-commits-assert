@@ -6,9 +6,15 @@ Send alert emails if test fails.
 
 ## Installation
 
+```
 npm install github-watchdog
+```
 
 ## Sample usage
+
+Setup github repo hook (only push events) to `http://your-server.com/push` url, where `http://your-server.com` domain of `github-watchdog` application.
+
+Example application config:
 
 ```javascript
 var startWatchdog = require('gihub-watchdog');
