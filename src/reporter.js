@@ -19,7 +19,8 @@ module.exports = class Reporter {
 			var data = {
 				repo: repo,
 				username: errors[0].author.username,
-				commits: errors
+				commits: errors,
+				time: new Date().toISOString()
 			};
 
 
