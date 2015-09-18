@@ -1,1 +1,2 @@
-var express = require('express');
+"use strict";
+module.exports = require('./src/start-server');
