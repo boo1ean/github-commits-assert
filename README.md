@@ -17,7 +17,7 @@ Setup github repo hook (only push events) to `http://your-server.com/push` url, 
 Example application config:
 
 ```javascript
-var startWatchdog = require('gihub-watchdog');
+var startWatchdog = require('github-watchdog');
 
 startWatchdog({
 	port: 3333,
