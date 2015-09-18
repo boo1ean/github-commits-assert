@@ -1,4 +1,8 @@
-## Check commit messages and send worning if something is wrong
+## Your github watchdog
+
+Verify commits for containing / not containing specified strings and stuff.
+
+Send alert emails if test fails.
 
 ## Installation
 
@@ -6,6 +10,7 @@ npm install github-watchdog
 
 ## Sample usage
 
+```javascript
 var startWatchdog = require('gihub-watchdog');
 
 startWatchdog({
@@ -31,3 +36,4 @@ startWatchdog({
 		'username/repo': 'commit message should contain JIRA-'
 	}
 });
+```
