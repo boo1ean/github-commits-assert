@@ -20,6 +20,8 @@ Example application config:
 var startWatchdog = require('gihub-watchdog');
 
 startWatchdog({
+	port: 3333,
+	
 	alerting: {
 		mailer: {
 			service: 'Mandrill',
